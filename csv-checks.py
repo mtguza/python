@@ -1,5 +1,5 @@
 # Quick script to take one CSV and check if a selected column exists in another CSV
-# Last updated 5/4/2022 MTG 
+# Last updated 5/5/2022 MTG 
 
 import csv  # https://docs.python.org/3/library/csv.html
 
@@ -50,7 +50,7 @@ def csvMatch(sListF, dListF):
     This function writes out CSV matches.
     '''
     countFound1 = 0
-    with open(outFile, 'w') as f3:
+    with open(outFile, 'w', newline='') as f3:
         for i in sListF:
             if i in dListF:
                 f3.write(i+'\n')
@@ -62,7 +62,7 @@ def csvMod(sListF):
     This function lets you modify the Source CSV if you so choose.
     '''
     countFound2 = 0
-    with open(csvDest, 'r') as f4, open(outFile, 'w') as f5:
+    with open(csvDest, 'r') as f4, open(outFile, 'w', newline='') as f5:
         reader3 = csv.reader(f4, delimiter=',')
         next(reader3, None)  # Skip row header
         writer1 = csv.writer(f5)
@@ -71,6 +71,8 @@ def csvMod(sListF):
                 mLine.append('MATCH')
                 writer1.writerow(mLine)
                 countFound2 = countFound2+1
+            else:
+                writer1.writerow(mLine)
     return countFound2
 
 
