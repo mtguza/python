@@ -12,6 +12,7 @@ feedUrl = 'https://www.cisa.gov/uscert/ncas/alerts.xml'  # RSS feed to pull down
 outFile = 'outfile.json'  # Output file for JSON events
 alertTracker = 'alert-tracker.txt'  # State file to track already received events (alerts)
 
+
 def feed_work(feedUrl):
     '''
     The 'feed_work' function does the bulk of the work to check for duplicate events and add
@@ -43,7 +44,7 @@ def feed_work(feedUrl):
     print('Retrieved '+str(eventsAdded)+' new events!')
     return (alertList)  # Return new events (alerts)
 
-# Get things going
+
 if __name__ == '__main__':
     print('Starting up...')
     jsonGoods = feed_work(feedUrl)  # Function return to a var
