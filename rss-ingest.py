@@ -3,9 +3,9 @@
 # Last updated 5/5/2022 MTG
 
 # Get necessary libraries
-import feedparser
-import json
-import sys
+import feedparser  # https://feedparser.readthedocs.io/en/latest/
+import json  # https://docs.python.org/3/library/json.html
+import sys  # https://docs.python.org/3/library/sys.html
 
 # Set necessary variables
 feedUrl = 'https://www.cisa.gov/uscert/ncas/alerts.xml'  # RSS feed to pull down
