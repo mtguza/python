@@ -1,6 +1,7 @@
 # Quick script to take one CSV and check if a selected column exists in another CSV
 # Last updated 5/5/2022 MTG 
 
+# Get necessary libraries
 import csv  # https://docs.python.org/3/library/csv.html
 
 # Variables needed
